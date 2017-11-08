@@ -61,6 +61,14 @@ app.get('/about', function(req, res) {
     });
 });
 
+app.get('/projects', function(req, res) {
+    //res.render renders a view/template
+    res.render('projects.hbs', {
+        pageTitle: 'My Projects',
+        
+    });
+});
+
 app.get('/bad', function(req, res) {
     res.send({
         errorMessage: "We weren't able to process your request"
